@@ -1,0 +1,209 @@
+/* LoginPage.css */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(120deg, #8e2de2, #4a00e0);
+}
+
+/* Анимированный фон */
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.light {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.25;
+  animation: move 20s infinite linear;
+}
+
+.light.purple {
+  background: #8e2de2;
+  top: 15%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.light.orange {
+  background: #ff8c00;
+  top: 65%;
+  left: 75%;
+  animation-delay: -7s;
+}
+
+.light.teal {
+  background: #00b4db;
+  bottom: 10%;
+  right: 15%;
+  animation-delay: -14s;
+}
+
+/* Анимация движения */
+@keyframes move {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-80px, 60px); }
+  50% { transform: translate(70px, -70px); }
+  75% { transform: translate(-60px, -50px); }
+}
+
+/* Стили карточки */
+.login-card {
+  width: 100%;
+  max-width: 480px;
+  border-radius: 20px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(15px);
+  background: rgba(255, 255, 255, 0.92);
+  border: none;
+  overflow: hidden;
+  z-index: 1;
+  padding: 40px 35px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-title {
+  color: #722ed1;
+  font-weight: 700;
+  margin-bottom: 10px;
+  letter-spacing: -0.5px;
+}
+
+/* Стили формы */
+.ant-form-item-label > label {
+  font-weight: 600;
+  color: #333;
+  font-size: 15px;
+}
+
+.ant-input-affix-wrapper {
+  padding: 12px 15px;
+  border-radius: 10px;
+  border: 1px solid #d9d9d9;
+}
+
+.ant-input-prefix {
+  margin-right: 10px;
+  color: #722ed1;
+}
+
+.remember-forgot {
+  margin-bottom: 10px;
+}
+
+.remember-forgot a {
+  color: #722ed1;
+  font-weight: 500;
+}
+
+/* Кнопка входа */
+.login-button {
+  height: 48px;
+  font-weight: 600;
+  font-size: 16px;
+  background: linear-gradient(to right, #722ed1, #1890ff);
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+  transition: all 0.4s;
+}
+
+.login-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 7px 15px rgba(114, 46, 209, 0.4);
+}
+
+/* Социальные кнопки */
+.social-login {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s;
+}
+
+.social-btn.google {
+  background: #fff;
+  border: 1px solid #ddd;
+  color: #db4437;
+}
+
+.social-btn.google:hover {
+  border-color: #db4437;
+  color: #db4437;
+  transform: translateY(-2px);
+}
+
+.social-btn.github {
+  background: #333;
+  color: #fff;
+  border: none;
+}
+
+.social-btn.github:hover {
+  background: #444;
+  transform: translateY(-2px);
+}
+
+.social-btn.facebook {
+  background: #1877f2;
+  color: #fff;
+  border: none;
+}
+
+.social-btn.facebook:hover {
+  background: #166fe5;
+  transform: translateY(-2px);
+}
+
+/* Футер */
+.login-footer {
+  text-align: center;
+  margin-top: 25px;
+  font-size: 16px;
+}
+
+.login-footer a {
+  font-weight: 600;
+  color: #722ed1;
+}
+
+/* Адаптивность */
+@media (max-width: 576px) {
+  .social-login {
+    flex-direction: column;
+  }
+  
+  .social-btn {
+    width: 100%;
+  }
+  
+  .login-card {
+    padding: 30px 20px;
+  }
+}

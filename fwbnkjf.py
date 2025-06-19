@@ -1,1 +1,1 @@
-print("DWNDLKND")
+print("OBAMA")

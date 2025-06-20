@@ -24,3 +24,8 @@ function Homepage(){
     </>
   )
 } 
+
+export default Homepage
+
+import React from 'react';
+import './homepage.css';
